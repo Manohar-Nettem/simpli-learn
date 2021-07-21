@@ -1,0 +1,21 @@
+.payment {
+  margin: 50px auto !important;
+  width: 50%;
+}
+.image {
+  height: 150px;
+  width: auto;
+}
+button {
+  border: none;
+  outline: 0;
+  padding: 10px 20px;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  cursor: pointer;
+  width: 60%;
+  font-size: 18px;
+  border-radius: 20px;
+  margin: 20px auto;
+}

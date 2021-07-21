@@ -1,0 +1,31 @@
+<header>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="row">
+        <img src="./../../../assets/images/Logo_Simplilearn.jpeg" alt="raithubazaar" class="logo" [routerLink]="['/']">
+      </div>
+    </div>
+    <!-- <div class="col-md-4 align-items-center">
+      <input type="text" matInput placeholder="Search..." [(ngModel)]="searchText" class="width-200">
+      <button class="search-button border" (click)="search()">
+        <mat-icon>search</mat-icon>
+      </button>
+
+
+    </div> -->
+    <div class="col align-items-center">
+      <ul class="nav">
+        <li class="nav-item " *ngIf="isAuthenticated">
+          <a href=" " class="nav-link " mat-button [routerLink]="'/my-courses'" [routerLinkActive]="'text-success'">My
+            Courses</a>
+        </li>
+        <li class="nav-item " *ngIf="isAuthenticated">
+          <a href=" " class="nav-link " mat-button (click)="logOut()">Logout</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</header>

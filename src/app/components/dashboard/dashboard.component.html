@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="card column products" *ngFor=" let product of products">
+    <img [src]="product.thumbnailURL" alt="product.thumbnailURL" style="width:100%" class="image">
+    <a class="title">{{product.title}}</a>
+    <p class="price">{{'$'+product.price}}</p>
+    <p><button (click)="payment(product)">Buy Now</button></p>
+  </div>
+</div>

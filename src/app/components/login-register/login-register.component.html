@@ -1,0 +1,73 @@
+<div class="container p-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-4" style="margin:auto;padding: 5px 10px;">
+        <div class="" *ngIf="isRegister">
+          <form (ngSubmit)="register(f)" #f="ngForm">
+
+            <section class="">
+              <label>Email</label>
+              <input type="email" class="form-control" name="email" ngModel required email #email="ngModel">
+              <div class="text-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
+                <div *ngIf="email.errors?.required">
+                  Email is required.
+                </div>
+              </div>
+            </section>
+            <section class="">
+              <label>Password</label>
+              <input type="password" class="form-control" name="password" ngModel required #password="ngModel">
+              <div class="text-danger" *ngIf="password.invalid && (password.dirty || password.touched)">
+                <div *ngIf="password.errors?.required">
+                  Password is required.
+                </div>
+              </div>
+            </section>
+
+
+            <br>
+            <button class="btn btn-outline-primary btn-block" type="submit" [disabled]="f.invalid">Sign Up</button>
+          </form>
+          <div class="text-center p-3">
+            <p>
+              Already Member? <a class="link" (click)="toggle()"> Log in</a>
+            </p>
+          </div>
+        </div>
+        <div class="pt-5" *ngIf="!isRegister">
+
+          <form [formGroup]="myForm" (ngSubmit)="logIn()">
+            <div formGroupName="loginInfo">
+              <section>
+                <label>Email</label>
+                <input type="email" class="form-control" formControlName="email" name="email" required>
+                <div class="help-block"
+                  *ngIf="myForm.get('loginInfo.email').invalid && (myForm.get('loginInfo.email').dirty || myForm.get('loginInfo.email').touched)">
+                  <p class="text-danger" *ngIf="myForm.get('loginInfo.email').errors?.required"> Email is required</p>
+                </div>
+              </section>
+              <section>
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="password" name="password" required>
+                <div class="help-block"
+                  *ngIf="myForm.get('loginInfo.password').invalid && (myForm.get('loginInfo.password').dirty || myForm.get('loginInfo.password').touched)">
+                  <p class="text-danger" *ngIf="myForm.get('loginInfo.password').errors?.required"> Password is required
+                  </p>
+                </div>
+              </section>
+            </div>
+            <br>
+            <button class="btn btn-outline-primary btn-block" type="submit" [disabled]="myForm.invalid">Sign In</button>
+          </form>
+          <div class="p-3 text-center">
+            <p>
+              Don't have an account?
+              <a class="link" (click)="toggle()"> Sign up</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

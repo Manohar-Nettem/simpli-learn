@@ -1,0 +1,32 @@
+<div class="row payment alert alert-success m-3">
+  <div class="col" style="text-align: center;">
+    <img [src]="image" class="image m-3">
+    <h4 class="m-3">{{title}}</h4>
+    <h4 class="m-3"> {{'$'+ price.toString()}}</h4>
+  </div>
+  <div class="col">
+
+    <form class="p-3" (submit)="completePayment(f)" #f="ngForm" *ngIf="!showOtp">
+      <label for="ccnum" class=""> Credit/Debit card number</label>
+      <input type="text" class="form-control" id="ccnum" name="ccnum" ngModel required #ccnum="ngModel"
+        placeholder="1111-2222-3333-4444" required>
+
+      <p style="text-align: center;"><button type="submit">Proceed</button></p>
+    </form>
+    <form name="otp" class="p-3" (submit)="verifyOtp(f1)" #f1="ngForm" *ngIf="showOtp">
+      <label for="ccnum" class=""> OTP</label>
+      <input type="text" class="form-control" id="ccnum" name="otp" ngModel required #otp="ngModel" placeholder="123456"
+        required>
+
+      <p style="text-align: center;"><button type="submit">Verify</button></p>
+    </form>
+
+  </div>
+
+
+
+</div>
+<div class="col-sm-3">
+
+
+</div>

@@ -11,14 +11,16 @@
       <input type="text" class="form-control" id="ccnum" name="ccnum" ngModel required #ccnum="ngModel"
         placeholder="1111-2222-3333-4444" required>
 
-      <p style="text-align: center;"><button type="submit">Proceed</button></p>
+      <p style="text-align: center;"><button type="submit" [disabled]="f.invalid">Proceed</button></p>
     </form>
     <form name="otp" class="p-3" (submit)="verifyOtp(f1)" #f1="ngForm" *ngIf="showOtp">
       <label for="ccnum" class=""> OTP</label>
       <input type="text" class="form-control" id="ccnum" name="otp" ngModel required #otp="ngModel" placeholder="123456"
         required>
 
-      <p style="text-align: center;"><button type="submit">Verify</button></p>
+      <p class="alert alert-danger" *ngIf="otpInvalid">OTP invalid</p>
+
+      <p style="text-align: center;"><button type="submit" [disabled]="f1.invalid">Verify</button></p>
     </form>
 
   </div>

@@ -24,7 +24,7 @@ export class AuthService {
     if (isPlatformBrowser(this.platformId)) {
       if (localStorage.getItem('userInfo') != null) {
         let user = JSON.parse(localStorage.getItem('userInfo') ?? "{}");
-        if (user.token) {
+        if (user && user.token) {
           let autoUser = new User(user.name, user.email, user.token);
           this.user.next(autoUser);
         }

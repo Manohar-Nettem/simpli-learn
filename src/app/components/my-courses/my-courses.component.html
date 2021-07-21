@@ -1,1 +1,11 @@
-<p>my-courses works!</p>
+<div class="row">
+  <div class="card column products" *ngFor=" let product of courses">
+    <img [src]="product.thumbnailURL" alt="product.thumbnailURL" style="width:100%" class="image">
+    <a class="title">{{product.title}}</a>
+    <p class="price">{{'$'+product.price}}</p>
+
+  </div>
+  <div class="row alert alert-danger" *ngIf="courses.length ==0">
+    <p>Courses not found. See the dashboard to buy course.</p>
+  </div>
+</div>

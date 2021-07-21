@@ -1,0 +1,76 @@
+[debug] [2021-07-21T11:13:11.458Z] ----------------------------------------------------------------------
+[debug] [2021-07-21T11:13:11.461Z] Command:       /usr/local/bin/node /Users/tradeleaves/.node_modules/bin/firebase deploy
+[debug] [2021-07-21T11:13:11.461Z] CLI Version:   9.12.0
+[debug] [2021-07-21T11:13:11.461Z] Platform:      darwin
+[debug] [2021-07-21T11:13:11.461Z] Node Version:  v14.16.1
+[debug] [2021-07-21T11:13:11.462Z] Time:          Wed Jul 21 2021 16:43:11 GMT+0530 (India Standard Time)
+[debug] [2021-07-21T11:13:11.462Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-07-21T11:13:11.472Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-07-21T11:13:11.472Z] > authorizing via signed-in user (manohar.nettem@gmail.com)
+[debug] [2021-07-21T11:13:11.472Z] [iam] checking project simplilearn-task for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-07-21T11:13:11.474Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/simplilearn-task:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-07-21T11:13:14.035Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 21 Jul 2021 11:13:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1154","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-21T11:13:14.038Z] > refreshing access token with scopes: []
+[debug] [2021-07-21T11:13:14.038Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-21T11:13:14.610Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 21 Jul 2021 11:13:14 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-21T11:13:14.625Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/simplilearn-task [none]
+[debug] [2021-07-21T11:13:15.964Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/simplilearn-task 200
+[debug] [2021-07-21T11:13:15.964Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/simplilearn-task {"projectId":"simplilearn-task","projectNumber":"805117471830","displayName":"simplilearn-task","name":"projects/simplilearn-task","resources":{"hostingSite":"simplilearn-task"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'simplilearn-task'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-07-21T11:13:15.967Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-21T11:13:15.968Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-21T11:13:16.397Z] <<< HTTP RESPONSE 200 {"date":"Wed, 21 Jul 2021 11:13:16 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-21T11:13:16.412Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/simplilearn-task/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-07-21T11:13:18.781Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 21 Jul 2021 11:13:18 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[simplilearn-task]: beginning deploy... 
+[info] i  hosting[simplilearn-task]: found 8 files in dist/simpli-learn 
+[debug] [2021-07-21T11:13:18.837Z] > refreshing access token with scopes: []
+[debug] [2021-07-21T11:13:18.837Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-07-21T11:13:18.840Z] [hosting] hash cache [ZGlzdC9zaW1wbGktbGVhcm4] stored for 8 files
+[debug] [2021-07-21T11:13:18.841Z] [hosting][hash queue][FINAL] {"max":45,"min":5,"avg":11.5,"active":0,"complete":8,"success":8,"errored":0,"retried":0,"total":8,"elapsed":51}
+[debug] [2021-07-21T11:13:19.226Z] <<< HTTP RESPONSE 200 {"date":"Wed, 21 Jul 2021 11:13:19 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-07-21T11:13:19.240Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/simplilearn-task/versions/fbb044218deea45a:populateFiles [none]
+[debug] [2021-07-21T11:13:19.240Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/simplilearn-task/versions/fbb044218deea45a:populateFiles {"files":{"/favicon.ico":"a2aee5309d0b59b9b66384ccc3969a07fab1b320d0bf76f1b25047a051d7f774","/index.html":"fc11d65e2b86ce2f21ae8b69fd98f590334595b4f9a382d41da07a3ceb2d927f","/runtime.7b63b9fd40098a2e8207.js":"c4aa0a348c0dcf9c6af4b7b3f066d0599bcec97472ed96ab232c8dceb70607cb","/3rdpartylicenses.txt":"7d7b91220d8904af0f43a30602eb30e45028af10afac7e047a6081db7647db0b","/assets/images/Logo_Simplilearn.jpeg":"ffd5f6568f2b8ede0daa07a0c116eb72d60cda4d24cb716880fa42c916d04e1a","/polyfills.97ba321f73c3ac22fd7e.js":"cabe0b0d6325567c63a0c428a375291cdfcabac5638b24caa3d254ba66bcf740","/styles.208eb60ab0cbc3dafa87.css":"85f83b221eb7df94f22bba30ea5cdb7575571fe24c0afd3c3781ac1f24996b2e","/main.282a0c5bdf7c96e86bee.js":"3d3f6e4b8f0acea5dcf45e417f3af1090fa4a6f0a9a67f9249f086143f67e5bc"}}
+[debug] [2021-07-21T11:13:21.407Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/simplilearn-task/versions/fbb044218deea45a:populateFiles 200
+[debug] [2021-07-21T11:13:21.407Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/simplilearn-task/versions/fbb044218deea45a:populateFiles {"uploadRequiredHashes":["3d3f6e4b8f0acea5dcf45e417f3af1090fa4a6f0a9a67f9249f086143f67e5bc","fc11d65e2b86ce2f21ae8b69fd98f590334595b4f9a382d41da07a3ceb2d927f"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/simplilearn-task/versions/fbb044218deea45a/files"}
+[debug] [2021-07-21T11:13:21.408Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/simplilearn-task/versions/fbb044218deea45a/files/3d3f6e4b8f0acea5dcf45e417f3af1090fa4a6f0a9a67f9249f086143f67e5bc [none]
+[debug] [2021-07-21T11:13:21.408Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simplilearn-task/versions/fbb044218deea45a/files/3d3f6e4b8f0acea5dcf45e417f3af1090fa4a6f0a9a67f9249f086143f67e5bc [stream]
+[debug] [2021-07-21T11:13:21.409Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/simplilearn-task/versions/fbb044218deea45a/files/fc11d65e2b86ce2f21ae8b69fd98f590334595b4f9a382d41da07a3ceb2d927f [none]
+[debug] [2021-07-21T11:13:21.410Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simplilearn-task/versions/fbb044218deea45a/files/fc11d65e2b86ce2f21ae8b69fd98f590334595b4f9a382d41da07a3ceb2d927f [stream]
+[debug] [2021-07-21T11:13:21.411Z] [hosting][populate queue][FINAL] {"max":2571,"min":2571,"avg":2571,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2574}
+[debug] [2021-07-21T11:13:21.411Z] [hosting] uploads queued: 2
+[debug] [2021-07-21T11:13:23.521Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/simplilearn-task/versions/fbb044218deea45a/files/fc11d65e2b86ce2f21ae8b69fd98f590334595b4f9a382d41da07a3ceb2d927f 200
+[debug] [2021-07-21T11:13:23.521Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simplilearn-task/versions/fbb044218deea45a/files/fc11d65e2b86ce2f21ae8b69fd98f590334595b4f9a382d41da07a3ceb2d927f [stream]
+[debug] [2021-07-21T11:13:25.090Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/simplilearn-task/versions/fbb044218deea45a/files/3d3f6e4b8f0acea5dcf45e417f3af1090fa4a6f0a9a67f9249f086143f67e5bc 200
+[debug] [2021-07-21T11:13:25.090Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/simplilearn-task/versions/fbb044218deea45a/files/3d3f6e4b8f0acea5dcf45e417f3af1090fa4a6f0a9a67f9249f086143f67e5bc [stream]
+[debug] [2021-07-21T11:13:25.090Z] [hosting][upload queue][FINAL] {"max":3683,"min":2113,"avg":2898,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":3683}
+[info] ✔  hosting[simplilearn-task]: file upload complete 
+[debug] [2021-07-21T11:13:25.091Z] [hosting] deploy completed after 6309ms
+[debug] [2021-07-21T11:13:25.093Z] [
+  {
+    "config": {
+      "public": "dist/simpli-learn",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "simplilearn-task"
+    },
+    "site": "simplilearn-task",
+    "version": "sites/simplilearn-task/versions/fbb044218deea45a"
+  }
+]
+[info] i  hosting[simplilearn-task]: finalizing version... 
+[debug] [2021-07-21T11:13:25.094Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-07-21T11:13:25.094Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>

@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { tap, map } from 'rxjs/operators';
 import { AuthService } from '../Auth/auth.service';
 import { User } from 'src/app/models/user.model';
+import { Course } from 'src/app/models/course.model';
 import { Product } from 'src/app/models/product.model';
 @Injectable({
   providedIn: 'root'
@@ -42,6 +43,6 @@ export class ProfileService {
   }
   getCourse(email: String) {
 
-    return this.http.post<Product[]>(this.url + 'api/profile/get/course', { email });
+    return this.http.post<Course[]>(this.url + 'api/profile/get/course', { email });
   }
 }

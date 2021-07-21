@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/simpli-learn",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

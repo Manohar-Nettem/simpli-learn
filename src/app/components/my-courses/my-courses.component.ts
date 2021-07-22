@@ -3,6 +3,8 @@ import { ProfileService } from 'src/app/services/profile/profile.service';
 import { AuthService } from 'src/app/services/Auth/auth.service';
 import { Product } from 'src/app/models/product.model';
 import { ProductsService } from 'src/app/services/products/products.service';
+import { SafeResourceUrl } from '@angular/platform-browser';
+import { SecurityContext } from '@angular/compiler/src/core';
 
 @Component({
   selector: 'app-my-courses',
@@ -13,6 +15,9 @@ export class MyCoursesComponent implements OnInit {
   courses: Product[] = [];
   courses2: Product[] = [];
   products: Product[] = [];
+  videos: String[] = [];
+  url: String;
+
   constructor(private profileService: ProfileService, private auth: AuthService, private productService: ProductsService) { }
 
   ngOnInit(): void {
@@ -34,17 +39,16 @@ export class MyCoursesComponent implements OnInit {
             });
           });
           console.log(this.courses);
-
-
         });
-
       })
-
-
-
     });
+  }
 
-
+  playVideos(product: Product) {
+    this.videos = product.videoLink;
+  }
+  setVideoUrl(url: String) {
+    this.url = url;
 
   }
 

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  // apiUrl: "https://raithubazaar.herokuapp.com/"
-  apiUrl: "http://localhost:5000/"
+  apiUrl: "https://simplilearn-node.herokuapp.com/"
+  // apiUrl: "http://localhost:5000/"
 };
 
 /*

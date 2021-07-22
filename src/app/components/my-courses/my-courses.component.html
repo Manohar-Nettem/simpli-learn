@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="card column products" *ngFor=" let product of courses">
+  <div class="card column products" *ngFor=" let product of courses" (click)="playVideos(product)">
     <img [src]="product.thumbnailURL" alt="product.thumbnailURL" style="width:100%" class="image">
     <a class="title">{{product.title}}</a>
     <p class="price">{{'$'+product.price}}</p>
@@ -7,5 +7,17 @@
   </div>
   <div class="row alert alert-danger" *ngIf="courses.length ==0">
     <p>Courses not found. See the dashboard to buy course.</p>
+  </div>
+</div>
+
+<div class="row" *ngIf="videos.length>0">
+  <div class="col-sm-4">
+    <p *ngFor="let url of videos" (click)="setVideoUrl(url)" class="text-white bg-dark m-3">{{url}}</p>
+  </div>
+  <div class="col-sm-8 ">
+    <div class="m-3 text-center" *ngIf="url">
+      <iframe width="400" height="400" [src]="url | safe">
+      </iframe>
+    </div>
   </div>
 </div>

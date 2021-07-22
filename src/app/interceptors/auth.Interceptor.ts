@@ -17,12 +17,20 @@ export class AuthInterceptor implements HttpInterceptor {
         if (!user) {
           return next.handle(req);
         }
-        const modifiedReq = req.clone({
-          setHeaders: {
-            Authorization: `Bearer ${user.token}`
-          }
-        })
+        let modifiedReq;
+        if (req.url != "https://s3-ap-southeast-1.amazonaws.com/he-public-data/courses26269ff.json") {
+          modifiedReq = req.clone({
+            setHeaders: {
+              Authorization: `Bearer ${user.token}`
+            }
+          });
+        } else {
+          modifiedReq = req.clone();
+        }
+
         console.log("interceptor:: ");
+        console.log(req.url);
+
 
         return next.handle(modifiedReq).pipe(catchError(
           (err, caught) => {

@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
   getProducts() {
     console.log("get products");
 
-    this.productService.getProducts().subscribe((data: Product[]) => {
+    this.productService.getProducts().subscribe((data) => {
       console.log(data);
       this.products = data;
 

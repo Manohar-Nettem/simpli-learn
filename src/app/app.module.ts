@@ -12,6 +12,7 @@ import { LoginRegisterComponent } from './components/login-register/login-regist
 import { PaymentComponent } from './components/payment/payment.component';
 import { MyCoursesComponent } from './components/my-courses/my-courses.component';
 import { AuthInterceptor } from './interceptors/auth.Interceptor';
+import { SafePipe } from './pipe/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AuthInterceptor } from './interceptors/auth.Interceptor';
     HomeComponent,
     HeaderComponent,
     PaymentComponent,
-    MyCoursesComponent
+    MyCoursesComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
